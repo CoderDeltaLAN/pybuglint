@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "refactoria"
+version = "0.1.0"
+description = "CLI to detect 'almost-bugs' commonly found in AI-generated Python code"
+authors = ["CoderDeltaLAN"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "refactoria", from = "src"}]
+keywords = ["ai code", "bug detection", "python", "static analysis", "cli", "lint", "quality"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Environment :: Console",
+  "Topic :: Software Development :: Quality Assurance",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License"
+]
+include = ["LICENSE", "README.md"]
+
+[tool.poetry.urls]
+Homepage = "https://github.com/CoderDeltaLAN/refactoria"
+Repository = "https://github.com/CoderDeltaLAN/refactoria"
+Issues = "https://github.com/CoderDeltaLAN/refactoria/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+typer = "*"
+rich = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+black = "*"
+pytest = "*"
+pytest-cov = "*"
+mypy = "*"
+hypothesis = "*"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+addopts = "-q --cov=refactoria --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[tool.poetry.scripts]
+refactoria = "refactoria.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
