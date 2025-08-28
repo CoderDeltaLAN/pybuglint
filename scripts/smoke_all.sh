@@ -4,13 +4,13 @@ set -euo pipefail
 echo "== Lint & format =="
 poetry run ruff check . --fix
 poetry run ruff format .
-poetry run black .
+poetry run python -m black .
 
 echo "== Type check =="
-poetry run mypy .
+poetry run python -m mypy .
 
 echo "== Tests =="
-poetry run pytest -q
+poetry run python -m pytest -q
 
 echo "== Reglas: matriz de verificación =="
 workdir="$(mktemp -d)"
