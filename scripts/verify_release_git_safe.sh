@@ -10,8 +10,8 @@ poetry run ruff format .
 poetry run python -m black .
 
 echo "== Types & Tests =="
-poetry run mypy .
-poetry run pytest -q
+poetry run python -m mypy .
+poetry run python -m pytest -q
 
 echo "== Smokes =="
 bash scripts/smoke_all.sh
