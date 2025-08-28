@@ -7,7 +7,7 @@ export LC_ALL=C.UTF-8
 echo "== Lint & Format =="
 poetry run ruff check . --fix
 poetry run ruff format .
-poetry run black .
+poetry run python -m black .
 
 echo "== Types & Tests =="
 poetry run mypy .
