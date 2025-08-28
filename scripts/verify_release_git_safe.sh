@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+poetry install --with dev --no-interaction >/dev/null
 set -eEuo pipefail
 trap 'echo "❌ Failed at line $LINENO"; exit 1' ERR
 export LC_ALL=C.UTF-8
