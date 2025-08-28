@@ -1,4 +1,4 @@
-from refactoria.cli import scan_text
+from pybuglint.cli import scan_text
 
 
 def test_scan_text_detects_none_eq() -> None:

@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "refactoria"
+name = "pybuglint"
 version = "0.1.0"
 description = "CLI to detect 'almost-bugs' commonly found in AI-generated Python code"
 authors = ["CoderDeltaLAN"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "refactoria", from = "src"}]
+packages = [{ include = "pybuglint", from = "src" }]
 keywords = ["ai code", "bug detection", "python", "static analysis", "cli", "lint", "quality"]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -19,9 +19,9 @@ classifiers = [
 include = ["LICENSE", "README.md"]
 
 [tool.poetry.urls]
-Homepage = "https://github.com/CoderDeltaLAN/refactoria"
-Repository = "https://github.com/CoderDeltaLAN/refactoria"
-Issues = "https://github.com/CoderDeltaLAN/refactoria/issues"
+Homepage = "https://github.com/CoderDeltaLAN/pybuglint"
+Repository = "https://github.com/CoderDeltaLAN/pybuglint"
+Issues = "https://github.com/CoderDeltaLAN/pybuglint/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.12,<3.13"
@@ -44,14 +44,14 @@ line-length = 100
 line-length = 100
 
 [tool.pytest.ini_options]
-addopts = "-q --cov=refactoria --cov-report=term-missing"
+addopts = "-q --cov=pybuglint --cov-report=term-missing"
 
 [tool.mypy]
 python_version = "3.12"
 strict = true
 
 [tool.poetry.scripts]
-refactoria = "refactoria.cli:main"
+pybuglint = "pybuglint.cli:main"
 
 [build-system]
 requires = ["poetry-core>=1.8.0"]

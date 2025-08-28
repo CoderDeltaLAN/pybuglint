@@ -29,9 +29,9 @@ tmpvenv="$(mktemp -d)"
 python -m venv "$tmpvenv/venv"
 source "$tmpvenv/venv/bin/activate"
 python -m pip install --upgrade pip >/dev/null
-wheel="$(ls -1 dist/refactoria-*.whl | head -n1)"
+wheel="$(ls -1 dist/pybuglint-*.whl | head -n1)"
 python -m pip install "$wheel" >/dev/null
-refactoria --help >/dev/null
+pybuglint --help >/dev/null
 deactivate && rm -rf "$tmpvenv"
 
 echo "== Repo sanity =="

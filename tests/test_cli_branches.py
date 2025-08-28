@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 import pytest
 from typer.testing import CliRunner
-from refactoria.cli import build_app, _main_cmd
+from pybuglint.cli import build_app, _main_cmd
 
 runner: CliRunner = CliRunner()
 app = build_app()

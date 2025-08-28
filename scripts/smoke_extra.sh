@@ -53,7 +53,7 @@ p.write_bytes("print('áéí')\n".encode("latin-1"))
 PY
 
 echo "== Run on root =="
-out="$(poetry run refactoria "$work" || true)"
+out="$(poetry run pybuglint "$work" || true)"
 printf "%s\n" "$out"
 
 echo "== Assertions =="
@@ -67,14 +67,14 @@ echo "✔ Rules assertions OK"
 echo "== Clean dir should pass =="
 clean="$(mktemp -d)"
 printf "x=None\nif x is None:\n    pass\n" > "$clean/ok.py"
-out2="$(poetry run refactoria "$clean")"
+out2="$(poetry run pybuglint "$clean")"
 printf "%s\n" "$out2"
 grep -q "Sin hallazgos" <<<"$out2"
 echo "✔ Clean scan OK"
 
 echo "== Exit codes =="
 # La CLI imprime el mensaje en STDOUT (no STDERR). Capturamos ambos.
-if poetry run refactoria "$work/not-exists" >out_invalid 2>err_invalid; then
+if poetry run pybuglint "$work/not-exists" >out_invalid 2>err_invalid; then
   echo "ERROR: esperaba fallo con exit!=0"; exit 1
 fi
 # Acepta que el mensaje aparezca en stdout (actual) o stderr (si se cambia en el futuro)

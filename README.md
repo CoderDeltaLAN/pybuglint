@@ -1,12 +1,12 @@
-# refactoria
+# pybuglint
 
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
 ![Lint: Ruff](https://img.shields.io/badge/lint-ruff-46a2f1)
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
-[![CI](https://github.com/CoderDeltaLAN/refactoria/actions/workflows/ci.yml/badge.svg)](https://github.com/CoderDeltaLAN/refactoria/actions/workflows/ci.yml)
+[![CI](https://github.com/CoderDeltaLAN/pybuglint/actions/workflows/ci.yml/badge.svg)](https://github.com/CoderDeltaLAN/pybuglint/actions/workflows/ci.yml)
 
-> **refactoria** — A modern **Python CLI** tool to detect and report *“almost-bugs”* often found in **AI-generated code**.  
+> **pybuglint** — A modern **Python CLI** tool to detect and report *“almost-bugs”* often found in **AI-generated code**.  
 > Designed for developers who want **clean, safe and production-ready code**, with zero noise and actionable feedback.
 
 ---
@@ -30,8 +30,8 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/CoderDeltaLAN/refactoria.git
-cd refactoria
+git clone https://github.com/CoderDeltaLAN/pybuglint.git
+cd pybuglint
 
 # Install dependencies
 poetry install --no-interaction
@@ -43,10 +43,10 @@ poetry install --no-interaction
 
 ```bash
 # Scan a directory
-poetry run refactoria src
+poetry run pybuglint src
 
 # Scan a single file
-poetry run refactoria my_script.py
+poetry run pybuglint my_script.py
 ```
 
 ---
@@ -111,7 +111,7 @@ poetry run pytest -q
 - [ ] Configurable rules via YAML.
 - [ ] Pre-commit integration.
 - [ ] Optional automatic fixes.
-- [ ] Publish to PyPI (`pip install refactoria`).
+- [ ] Publish to PyPI (`pip install pybuglint`).
 
 ---
 

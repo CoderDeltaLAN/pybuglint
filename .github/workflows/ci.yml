@@ -32,4 +32,4 @@ jobs:
           PYTHONPATH: src
         run: poetry run pytest -q
       - name: Smoke CLI
-        run: poetry run refactoria src
+        run: poetry run pybuglint src

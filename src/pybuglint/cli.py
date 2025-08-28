@@ -68,7 +68,7 @@ def _run_scan(path: Path) -> int:
     return 0
 
 
-# Entry-point binario: `refactoria <path>`
+# Entry-point binario: `pybuglint <path>`
 def _main_cmd(path: Path = typer.Argument(..., help="Archivo .py o carpeta a analizar")) -> None:
     _run_scan(path)
 
