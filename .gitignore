@@ -11,3 +11,4 @@ verify.log
 out_invalid
 err_invalid
 err
+logs/
