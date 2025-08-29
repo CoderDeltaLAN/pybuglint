@@ -196,14 +196,14 @@ toml = ["tomli ; python_full_version <= \"3.11.0a6\""]
 
 [[package]]
 name = "hypothesis"
-version = "6.138.4"
+version = "6.138.7"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "hypothesis-6.138.4-py3-none-any.whl", hash = "sha256:b53944dd41f4c9f18f3b9846004ba64b84fdfa716815e6a971b0b568863aa18a"},
-    {file = "hypothesis-6.138.4.tar.gz", hash = "sha256:276a8fe109247b94588dc8a69cbe374a9debbe040f3e4893f43635b1147c0dc1"},
+    {file = "hypothesis-6.138.7-py3-none-any.whl", hash = "sha256:ec96ad34a50fa638491b5c08a37344db57765a9d7cdc863a38aadf27d52c317c"},
+    {file = "hypothesis-6.138.7.tar.gz", hash = "sha256:e3adc2df34d8e5d5a1f2b3aff399327544525137acfecbac3b0343c189e52126"},
 ]
 
 [package.dependencies]
@@ -567,4 +567,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<3.13"
-content-hash = "f2fdc7124d91fde3e2505e183bcbb6c1fff86e9e564a90922e1e263f51345668"
+content-hash = "92b15f02e7590cf395e5ffb7aa54f79c64cea3b0b74c96d5e67e7c80ebaad787"

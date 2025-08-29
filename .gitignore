@@ -12,3 +12,6 @@ out_invalid
 err_invalid
 err
 logs/
+_tmp_smoke/
+_local_logs/
+coverage.xml

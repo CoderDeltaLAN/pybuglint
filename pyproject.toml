@@ -30,11 +30,11 @@ rich = "*"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "*"
-black = "*"
-pytest = "*"
-pytest-cov = "*"
-mypy = "*"
-hypothesis = "*"
+black = "^25.1.0"
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+mypy = "^1.17.1"
+hypothesis = "^6.138.7"
 
 [tool.ruff]
 target-version = "py312"
