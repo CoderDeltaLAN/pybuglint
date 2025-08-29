@@ -11,7 +11,11 @@ console = Console()
 
 # Reglas de "casi-bugs" típicos en código generado por IA
 RULES: list[tuple[str, str, str]] = [
-    ("comparación con None usando ==/!=", r"==\s*None|!=\s*None", "Usa 'is None' o 'is not None'"),
+    (
+        "comparación con None usando ==/!=",
+        r"==\s*None|!=\s*None",
+        "Usa 'is None' o 'is not None'",
+    ),
     ("except vacío o bare", r"^\s*except\s*:\s*$", "Captura explícita de excepciones"),
     (
         "mutable por defecto en función",
@@ -63,13 +67,17 @@ def _run_scan(path: Path) -> int:
             total += len(findings)
 
     console.print(
-        "[green]Sin hallazgos[/green]" if total == 0 else f"[yellow]{total} hallazgos[/yellow]"
+        "[green]Sin hallazgos[/green]"
+        if total == 0
+        else f"[yellow]{total} hallazgos[/yellow]"
     )
     return 0
 
 
 # Entry-point binario: `pybuglint <path>`
-def _main_cmd(path: Path = typer.Argument(..., help="Archivo .py o carpeta a analizar")) -> None:
+def _main_cmd(
+    path: Path = typer.Argument(..., help="Archivo .py o carpeta a analizar"),
+) -> None:
     _run_scan(path)
 
 
